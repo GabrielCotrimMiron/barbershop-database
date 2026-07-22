@@ -1,148 +1,181 @@
 # 💈 Barbershop Database
 
-![Database Diagram](docs/database-diagram.svg)
+<p align="center">
+  <img src="docs/database-diagram.svg" alt="Entity-Relationship Diagram" width="900">
+</p>
 
-## 📖 About the Project
+<p align="center">
 
-**Barbershop Database** is a relational database project developed in **MySQL** for a barbershop management system.
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
+![UTFPR](https://img.shields.io/badge/UTFPR-Academic%20Project-blue?style=for-the-badge)
+![License](https://img.shields.io/github/license/GabrielCotrimMiron/barbershop-database?style=for-the-badge)
 
-The project was created as part of the **Database** course in the **Software Engineering** program at the **Federal University of Technology – Paraná (UTFPR)**, under the supervision of **Prof. Eduardo Cotrin Teixeira**.
+</p>
 
-Its objective is to model, implement, populate and query a relational database while applying fundamental database concepts such as normalization, primary and foreign keys, referential integrity and SQL queries.
+A relational database project developed in **MySQL** for managing a barbershop's daily operations.
+
+This project was created for the **Database** course of the **Bachelor's Degree in Software Engineering** at the **Federal University of Technology – Paraná (UTFPR)** under the supervision of **Prof. Eduardo Cotrin Teixeira**.
+
+The project focuses on relational database modeling, implementation and querying while applying concepts such as normalization, referential integrity, primary and foreign keys, and SQL joins.
 
 ---
 
-## 🎯 Objectives
+# 📑 Table of Contents
 
-The database was designed to manage the main operations of a barbershop, including:
+- [Overview](#-overview)
+- [Features](#-features)
+- [Database Model](#-database-model)
+- [Entity Summary](#-entity-summary)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Implemented Queries](#-implemented-queries)
+- [Database Concepts Applied](#-database-concepts-applied)
+- [Possible Improvements](#-possible-improvements)
+- [Authors](#-authors)
+- [License](#-license)
+
+---
+
+# 📖 Overview
+
+The objective of this project is to design and implement a relational database capable of managing the core operations of a barbershop.
+
+The implemented solution stores information about customers, employees, addresses, services, phone numbers and appointments while ensuring data consistency through primary keys, foreign keys and relational constraints.
+
+The database was modeled following relational database principles and implemented using MySQL.
+
+---
+
+# ✨ Features
 
 - Customer registration
-- Employee registration
+- Employee and administrator registration
 - Address management
-- Phone records
+- Phone number management
 - Service catalog
 - Appointment scheduling
-- Appointment status tracking
+- Appointment status control
+- SQL queries for data retrieval
 
 ---
 
-## 🛠 Technologies
+# 🗄 Database Model
 
-| Technology | Purpose |
-|------------|---------|
-| MySQL | Database Management System |
-| SQL | Database definition and manipulation language |
-| DBDiagram | Entity-Relationship Diagram |
+The Entity-Relationship Diagram below represents the complete database schema implemented in this project.
 
----
-
-## 🗂 Database Structure
-
-The database contains the following entities:
-
-- **Address**
-- **User (Employee / Administrator)**
-- **Customer**
-- **Phone**
-- **Service**
-- **Appointment**
-
-The complete Entity-Relationship Diagram can be found below.
-
-### Entity-Relationship Diagram
-
-![Entity Relationship Diagram](docs/database-diagram.svg)
+<p align="center">
+<img src="docs/database-diagram.svg" width="900">
+</p>
 
 ---
 
-## 📁 Project Structure
+# 📋 Entity Summary
+
+| Entity | Description |
+|---------|-------------|
+| **Address** | Stores address information shared by customers and employees. |
+| **User** | Represents employees and administrators responsible for appointments. |
+| **Customer** | Stores customer personal information. |
+| **Phone** | Stores phone numbers associated with either customers or employees. |
+| **Service** | Stores the services offered by the barbershop. |
+| **Appointment** | Represents scheduled services between customers and employees. |
+
+---
+
+# 📂 Project Structure
 
 ```
-barbershop-database/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
+barbershop-database
 │
 ├── docs/
 │   └── database-diagram.svg
 │
-└── sql/
-    ├── 01_create_database.sql
-    ├── 02_insert_data.sql
-    ├── 03_queries.sql
-    └── 04_drop_database.sql
+├── sql/
+│   ├── 01_create_database.sql
+│   ├── 02_insert_data.sql
+│   ├── 03_queries.sql
+│   └── 04_drop_database.sql
+│
+├── LICENSE
+├── README.md
+└── .gitignore
 ```
-
-### Folder Description
-
-| Folder | Description |
-|---------|-------------|
-| `docs/` | Project documentation and ER diagram |
-| `sql/` | SQL scripts used in the project |
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
-Execute the SQL scripts in the following order:
+## 1. Clone the repository
 
-### 1. Create the database
+```bash
+git clone https://github.com/GabrielCotrimMiron/barbershop-database.git
+```
 
-```sql
+---
+
+## 2. Open your MySQL client
+
+Examples:
+
+- MySQL Workbench
+- phpMyAdmin
+- DBeaver
+- Command Line Client
+
+---
+
+## 3. Execute the scripts in order
+
+```
 01_create_database.sql
 ```
 
 Creates the database and all tables.
 
----
-
-### 2. Insert sample data
-
-```sql
+```
 02_insert_data.sql
 ```
 
-Populates the database with sample records.
+Populates the database with sample data.
 
----
-
-### 3. Execute the queries
-
-```sql
+```
 03_queries.sql
 ```
 
-Runs all SQL queries required for the project.
+Executes the SQL queries developed for the project.
 
----
-
-### 4. (Optional) Remove the database
-
-```sql
+```
 04_drop_database.sql
 ```
 
-Deletes the database from the server.
+(Optional) Removes the database from the server.
 
 ---
 
-## 🔎 Implemented Queries
+# 🔍 Implemented Queries
 
-The project includes SQL queries demonstrating different database operations, including:
+The project includes SQL queries demonstrating relational database operations such as filtering, joins and data retrieval.
 
-- Retrieve customers and their addresses
-- List canceled appointments and related services
-- Retrieve active appointments scheduled for December 2025
-- Find appointments handled by a specific employee
-- Identify customers who completed a specific service
+The implemented queries are:
+
+1. Retrieve complete customer information together with their addresses.
+
+2. Retrieve customers and services associated with canceled appointments.
+
+3. Retrieve active appointments scheduled for December 2025.
+
+4. Retrieve appointments handled by a specific employee.
+
+5. Retrieve customers who completed the **"Men's Haircut"** service.
 
 ---
 
-## 📚 Database Concepts Applied
+# 🧠 Database Concepts Applied
 
-- Relational database modeling
-- Entity-Relationship modeling
+- Relational Database Modeling
+- Entity-Relationship Modeling (ERD)
+- Normalization
 - Primary Keys
 - Foreign Keys
 - Referential Integrity
@@ -152,26 +185,54 @@ The project includes SQL queries demonstrating different database operations, in
 - SQL SELECT
 - INNER JOIN
 - LEFT JOIN
-- Filtering with WHERE
-- Data ordering and selection
+- Filtering using WHERE
+- UNIQUE Constraints
+- ENUM Attributes
 
 ---
 
-## 👨‍💻 Authors
+# 🚧 Possible Improvements
 
-- Gabriel Cotrim Miron
-- Hugo Pessoni Batista
+Although the project fully satisfies the academic requirements, several enhancements could be implemented in a production environment:
+
+- Password hashing instead of plain text storage.
+- Multiple services within the same appointment.
+- Appointment duration management.
+- CHECK constraints for additional data validation.
+- Stored procedures.
+- Database triggers.
+- Index optimization for large datasets.
+- Soft delete strategy.
+- Audit logs.
 
 ---
 
-## 📄 Academic Information
+# 👨‍💻 Authors
 
-This project was developed as part of the **Database** course of the **Bachelor's Degree in Software Engineering** at **UTFPR (Federal University of Technology – Paraná)**.
+**Gabriel Cotrim Miron**
+
+Software Engineering Student — UTFPR
+
+GitHub: https://github.com/GabrielCotrimMiron
+
+---
+
+**Hugo Pessoni Batista**
+
+Software Engineering Student — UTFPR
+
+---
+
+# 📚 Academic Context
+
+This repository was developed as the practical assignment for the **Database** course in the **Bachelor's Degree in Software Engineering** at the **Federal University of Technology – Paraná (UTFPR)**.
 
 **Professor:** Eduardo Cotrin Teixeira
 
 ---
 
-## 📜 License
+# 📄 License
 
-This project is available under the MIT License.
+This project is licensed under the MIT License.
+
+See the `LICENSE` file for more information.
