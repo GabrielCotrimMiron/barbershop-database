@@ -191,22 +191,6 @@ The implemented queries are:
 
 ---
 
-# 🚧 Possible Improvements
-
-Although the project fully satisfies the academic requirements, several enhancements could be implemented in a production environment:
-
-- Password hashing instead of plain text storage.
-- Multiple services within the same appointment.
-- Appointment duration management.
-- CHECK constraints for additional data validation.
-- Stored procedures.
-- Database triggers.
-- Index optimization for large datasets.
-- Soft delete strategy.
-- Audit logs.
-
----
-
 # 👨‍💻 Authors
 
 **Gabriel Cotrim Miron**
