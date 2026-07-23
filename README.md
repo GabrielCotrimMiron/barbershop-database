@@ -1,68 +1,68 @@
 # 💈 Barbershop Database
 
 <p align="center">
-  <img src="docs/database-diagram.svg" alt="Entity-Relationship Diagram" width="900">
+  <img src="docs/database-diagram.svg" alt="Diagrama Entidade-Relacionamento" width="900">
 </p>
 
 <p align="center">
 
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
-![UTFPR](https://img.shields.io/badge/UTFPR-Academic%20Project-blue?style=for-the-badge)
+![UTFPR](https://img.shields.io/badge/UTFPR-Projeto%20Acadêmico-blue?style=for-the-badge)
 ![License](https://img.shields.io/github/license/GabrielCotrimMiron/barbershop-database?style=for-the-badge)
 
 </p>
 
-A relational database project developed in **MySQL** for managing a barbershop's daily operations.
+Banco de dados relacional desenvolvido em **MySQL** para gerenciamento de uma barbearia.
 
-This project was created for the **Database** course of the **Bachelor's Degree in Software Engineering** at the **Federal University of Technology – Paraná (UTFPR)** under the supervision of **Prof. Eduardo Cotrin Teixeira**.
+Este projeto foi desenvolvido para a disciplina de **Banco de Dados** do curso de **Engenharia de Software** da **Universidade Tecnológica Federal do Paraná (UTFPR)**, sob orientação do **Prof. Eduardo Cotrin Teixeira**.
 
-The project focuses on relational database modeling, implementation and querying while applying concepts such as normalization, referential integrity, primary and foreign keys, and SQL joins.
-
----
-
-# 📑 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Database Model](#-database-model)
-- [Entity Summary](#-entity-summary)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Implemented Queries](#-implemented-queries)
-- [Database Concepts Applied](#-database-concepts-applied)
-- [Possible Improvements](#-possible-improvements)
-- [Authors](#-authors)
-- [License](#-license)
+Seu principal objetivo é aplicar conceitos de modelagem de bancos de dados relacionais, normalização, integridade referencial e consultas SQL por meio da implementação de um sistema de gerenciamento para uma barbearia.
 
 ---
 
-# 📖 Overview
+# 📑 Sumário
 
-The objective of this project is to design and implement a relational database capable of managing the core operations of a barbershop.
-
-The implemented solution stores information about customers, employees, addresses, services, phone numbers and appointments while ensuring data consistency through primary keys, foreign keys and relational constraints.
-
-The database was modeled following relational database principles and implemented using MySQL.
-
----
-
-# ✨ Features
-
-- Customer registration
-- Employee and administrator registration
-- Address management
-- Phone number management
-- Service catalog
-- Appointment scheduling
-- Appointment status control
-- SQL queries for data retrieval
+- [Visão Geral](#-visão-geral)
+- [Funcionalidades](#-funcionalidades)
+- [Modelo do Banco de Dados](#-modelo-do-banco-de-dados)
+- [Resumo das Entidades](#-resumo-das-entidades)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Como Executar](#-como-executar)
+- [Consultas Implementadas](#-consultas-implementadas)
+- [Conceitos Aplicados](#-conceitos-aplicados)
+- [Possíveis Melhorias](#-possíveis-melhorias)
+- [Autores](#-autores)
+- [Licença](#-licença)
 
 ---
 
-# 🗄 Database Model
+# 📖 Visão Geral
 
-The Entity-Relationship Diagram below represents the complete database schema implemented in this project.
+O projeto modela e implementa um banco de dados capaz de gerenciar as principais operações de uma barbearia.
+
+A solução contempla o cadastro de clientes, funcionários, endereços, telefones, serviços e agendamentos, utilizando chaves primárias, chaves estrangeiras e relacionamentos para garantir a consistência dos dados.
+
+Toda a estrutura foi implementada utilizando **MySQL**, seguindo boas práticas de modelagem relacional.
+
+---
+
+# ✨ Funcionalidades
+
+- Cadastro de clientes
+- Cadastro de funcionários e administradores
+- Gerenciamento de endereços
+- Gerenciamento de telefones
+- Cadastro de serviços
+- Controle de agendamentos
+- Controle do status dos agendamentos
+- Consultas SQL utilizando relacionamentos entre tabelas
+
+---
+
+# 🗄 Modelo do Banco de Dados
+
+O diagrama abaixo representa toda a estrutura implementada neste projeto.
 
 <p align="center">
 <img src="docs/database-diagram.svg" width="900">
@@ -70,22 +70,22 @@ The Entity-Relationship Diagram below represents the complete database schema im
 
 ---
 
-# 📋 Entity Summary
+# 📋 Resumo das Entidades
 
-| Entity | Description |
-|---------|-------------|
-| **Address** | Stores address information shared by customers and employees. |
-| **User** | Represents employees and administrators responsible for appointments. |
-| **Customer** | Stores customer personal information. |
-| **Phone** | Stores phone numbers associated with either customers or employees. |
-| **Service** | Stores the services offered by the barbershop. |
-| **Appointment** | Represents scheduled services between customers and employees. |
+| Entidade | Descrição |
+|----------|-----------|
+| **Endereço** | Armazena os endereços utilizados por clientes e funcionários. |
+| **Usuário** | Representa funcionários e administradores do sistema. |
+| **Cliente** | Armazena os dados cadastrais dos clientes. |
+| **Telefone** | Registra os telefones associados a clientes ou funcionários. |
+| **Serviço** | Armazena os serviços oferecidos pela barbearia. |
+| **Agendamento** | Controla os agendamentos realizados entre clientes e funcionários. |
 
 ---
 
-# 📂 Project Structure
+# 📂 Estrutura do Projeto
 
-```
+```text
 barbershop-database
 │
 ├── docs/
@@ -104,9 +104,9 @@ barbershop-database
 
 ---
 
-# 🚀 Getting Started
+# 🚀 Como Executar
 
-## 1. Clone the repository
+## 1. Clone o repositório
 
 ```bash
 git clone https://github.com/GabrielCotrimMiron/barbershop-database.git
@@ -114,88 +114,80 @@ git clone https://github.com/GabrielCotrimMiron/barbershop-database.git
 
 ---
 
-## 2. Open your MySQL client
+## 2. Abra um cliente MySQL
 
-Examples:
+Exemplos:
 
 - MySQL Workbench
-- phpMyAdmin
 - DBeaver
-- Command Line Client
+- phpMyAdmin
+- MySQL Command Line Client
 
 ---
 
-## 3. Execute the scripts in order
+## 3. Execute os scripts na seguinte ordem
 
-```
-01_create_database.sql
-```
+### 01_create_database.sql
 
-Creates the database and all tables.
+Cria o banco de dados e todas as tabelas.
 
-```
-02_insert_data.sql
-```
+### 02_insert_data.sql
 
-Populates the database with sample data.
+Insere registros de exemplo.
 
-```
-03_queries.sql
-```
+### 03_queries.sql
 
-Executes the SQL queries developed for the project.
+Executa as consultas desenvolvidas para o projeto.
 
-```
-04_drop_database.sql
-```
+### 04_drop_database.sql
 
-(Optional) Removes the database from the server.
+(Opcional) Remove o banco de dados.
 
 ---
 
-# 🔍 Implemented Queries
+# 🔎 Consultas Implementadas
 
-The project includes SQL queries demonstrating relational database operations such as filtering, joins and data retrieval.
+O projeto contempla consultas SQL que demonstram diferentes operações sobre um banco de dados relacional.
 
-The implemented queries are:
+As consultas implementadas são:
 
-1. Retrieve complete customer information together with their addresses.
+1. Listar clientes juntamente com seus respectivos endereços.
 
-2. Retrieve customers and services associated with canceled appointments.
+2. Listar clientes e serviços relacionados aos agendamentos cancelados.
 
-3. Retrieve active appointments scheduled for December 2025.
+3. Listar os agendamentos ativos previstos para dezembro de 2025.
 
-4. Retrieve appointments handled by a specific employee.
+4. Listar os agendamentos realizados por um funcionário específico.
 
-5. Retrieve customers who completed the **"Men's Haircut"** service.
+5. Listar os clientes que concluíram o serviço **"Corte Masculino"**.
 
 ---
 
-# 🧠 Database Concepts Applied
+# 🧠 Conceitos Aplicados
 
-- Relational Database Modeling
-- Entity-Relationship Modeling (ERD)
-- Normalization
-- Primary Keys
-- Foreign Keys
-- Referential Integrity
-- One-to-Many Relationships
+- Modelagem de Banco de Dados Relacional
+- Modelo Entidade-Relacionamento (MER)
+- Normalização
+- Chaves Primárias
+- Chaves Estrangeiras
+- Integridade Referencial
+- Relacionamentos Um-para-Muitos
 - SQL DDL
 - SQL DML
-- SQL SELECT
+- Consultas SQL (SELECT)
 - INNER JOIN
 - LEFT JOIN
-- Filtering using WHERE
-- UNIQUE Constraints
-- ENUM Attributes
+- Filtros com WHERE
+- Restrições UNIQUE
+- ENUM
 
 ---
 
-# 👨‍💻 Authors
+# 👨‍💻 Autores
 
 **Gabriel Cotrim Miron**
 
-Software Engineering Student — UTFPR
+Estudante de Engenharia de Software — UTFPR
 
 GitHub: https://github.com/GabrielCotrimMiron
 
@@ -203,20 +195,20 @@ GitHub: https://github.com/GabrielCotrimMiron
 
 **Hugo Pessoni Batista**
 
-Software Engineering Student — UTFPR
+Estudante de Engenharia de Software — UTFPR
 
 ---
 
-# 📚 Academic Context
+# 🎓 Contexto Acadêmico
 
-This repository was developed as the practical assignment for the **Database** course in the **Bachelor's Degree in Software Engineering** at the **Federal University of Technology – Paraná (UTFPR)**.
+Este projeto foi desenvolvido como trabalho prático da disciplina de **Banco de Dados** do curso de **Bacharelado em Engenharia de Software** da **Universidade Tecnológica Federal do Paraná (UTFPR)**.
 
 **Professor:** Eduardo Cotrin Teixeira
 
 ---
 
-# 📄 License
+# 📄 Licença
 
-This project is licensed under the MIT License.
+Este projeto está licenciado sob a **MIT License**.
 
-See the `LICENSE` file for more information.
+Consulte o arquivo `LICENSE` para mais informações.
